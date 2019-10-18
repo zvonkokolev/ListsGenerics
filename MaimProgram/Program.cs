@@ -21,12 +21,12 @@ namespace MainProgram
 			Console.WriteLine("Liste unsortiert");
 			PrintOut(persons);
 
-			MySort.Sort(persons);
+			MySort<Person>.Sort(persons);
 			Console.WriteLine();
 			Console.WriteLine("Liste sortiert nach VORNAME aufsteigend!!!");
 			PrintOut(persons);
 
-			MySort.Sort(persons, new PersonAgeComparer());
+			MySort<Person>.Sort(persons, new PersonAgeComparer());
 			Console.WriteLine();
 			Console.WriteLine("Liste sortiert nach ALTER absteigend!!!");
 			PrintOut(persons);

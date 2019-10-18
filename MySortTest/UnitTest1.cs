@@ -24,7 +24,7 @@ namespace MySortTest
 			object[] targetArray = new object[6];
 			//Act
 			list.CopyTo(targetArray, 0);
-			MySort.Sort(targetArray);
+			MySort<object>.Sort(targetArray);
 			//Assert
 			CollectionAssert.AreEqual(expected, targetArray);
 		}
@@ -48,7 +48,7 @@ namespace MySortTest
 				new Person ("Maier", "Helmut",  42)
 			};
 
-			MySort.Sort(list);
+			MySort<object>.Sort(list);
 			//Assert
 			Assert.AreEqual(list.ToString(), erwartet.ToString());
 		}
@@ -65,7 +65,7 @@ namespace MySortTest
 			list[4] = "Burghard";
 			//Act
 			string[] index = { "Adolf", "Burghard", "Huber", "Maier", "Müller" };
-			MySort.Sort(list);
+			MySort<object>.Sort(list);
 			int count = 0;
 			foreach (var item in list)
 			{
@@ -93,7 +93,7 @@ namespace MySortTest
 				new Person ("Müller", "Thomas", 33),
 				new Person ("Maier", "Helmut",  42)
 			};
-			MySort.Sort(list, new PersonAgeComparer());
+			MySort<object>.Sort(list, new PersonAgeComparer());
 			//Assert
 			Assert.AreEqual(list.ToString(), erwartet.ToString());
 		}

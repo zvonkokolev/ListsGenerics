@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Lists.ListLogic
 {
-	public class MySort
+	public class MySort<T>
 	{
 		//SORT methods
-		public static void Sort<T>(T[] array)
+		public static void Sort(T[] array)
 		{
 			if (array == null)
 			{
@@ -34,7 +34,7 @@ namespace Lists.ListLogic
 				}
 			} while (change == true);
 		}
-		public static void Sort<T>(T[] array, IComparer comparer)
+		public static void Sort(T[] array, IComparer comparer)
 		{
 			if (array == null)
 				throw new ArgumentNullException(nameof(array));
